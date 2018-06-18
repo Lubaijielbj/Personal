@@ -1,0 +1,128 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Common.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <style>
+        @@font-face {
+            font-family: 'icomoon';
+            src: url('../../fonts/icomoon.svg') format('svg');
+        }
+
+        @@font-face {
+            font-family: 'icomoon';
+            src: url('../../fonts/icomoon.ttf') format('truetype');
+        }
+    </style>
+    @RenderSection("head", false)
+</head>
+<body>
+    <div class="nav-top">
+        <div class="fix-warp clearfix">
+            @*头像*@
+            <img src="~/Images/logo.png" class="nav-top-logo" />
+            @*菜单*@
+            <ul class="nav-top-menu">
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon-personal"></i>
+                        <span>个人中心</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon-homepage"></i>
+                        <span>我的主页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon-friend"></i>
+                        <span>好友</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon-game"></i>
+                        <span>游戏</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon-dress"></i>
+                        <span>装扮</span>
+                    </a>
+                </li>
+            </ul>
+
+            @*用户信息*@
+            <div class="nav-top-user">
+                <a href="javascript:;">
+                    <img src="~/Images/head.jpg" class="nav-top-head" />
+                    <span class="nav-top-nick">团子</span>
+                </a>
+                <a href="javascript:;" class="nav-top-exit iconfont"></a>
+                <div class="nav-top-setting">                  
+                    <a href="javascript:;" class="iconfont"></a>
+
+                    <ul>
+                        <li>
+                            <a href="javascript:;">
+                                修改资料
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                主页排版
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                空间设置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                权限设置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                帮助中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                意见反馈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                修改密码
+                            </a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+
+            @*搜索*@
+            <div class="nav-top-search">
+                <div>
+                    <input class="nav-top-search-box" type="text" placeholder="好友/动态/广场" />
+                    <a class="nav-top-search-btn iconfont" href="javascript:;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="nav-pic">
+
+    </div>*@
+    <div class="mainbody fix-warp clearfix">       
+        @RenderBody()
+    </div>
+</body>
+</html>

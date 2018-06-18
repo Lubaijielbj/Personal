@@ -1,0 +1,229 @@
+﻿
+@{
+    ViewBag.Title = "主页";
+    Layout = "~/Views/Shared/_MasterView.cshtml";
+}
+
+@section head{
+    <script>
+        $(function () {
+            hotshow('hot1');
+        })
+
+        function hotdisplay() {
+            var hot = $("a[name='hot']");
+            hot.children('.hot-head').css({ "width": "25px", "height": "25px", "vertical-align": "middle" });
+            hot.children('.hot-user').children('.hot-user-info').css("display", "none");
+            hot.children('.hot-icon').css("display", "inline-block");
+        }
+
+        function hotshow(id) {
+            hotdisplay();
+            var s = '#' + id;
+            var hot = $(s);
+            hot.children('.hot-head').css({ "width": "50px", "height": "50px", "vertical-align": "top" });
+            hot.children('.hot-user').children('.hot-user-info').css("display", "block");
+            hot.children('.hot-icon').css("display", "none");
+        }
+    </script>
+    }  
+
+@*左边菜单*@
+<div class="nav-left">
+    <div class="nav-left-userInfo">
+        <img class="nav-left-head" src="~/Images/head.jpg" />
+        <div class="userInfo">
+            <span>团子</span>
+            <span>
+                <select>
+                    <option>在线</option>
+                    <option>忙碌</option>
+                    <option>隐身</option>
+                    <option>离线</option>
+                </select>
+            </span>
+            
+            <div>
+                <span style="font-size:70%">等级:</span>
+                <span class="usergrade iconfont"></span>
+                <span class="usergrade iconfont"></span>
+                <span class="usergrade iconfont"></span>
+                <span class="usergrade iconfont"></span>
+                <span class="usergrade iconfont"></span>
+            </div>
+            <div class="userInfo-list">
+                <div>
+                    <p>1239</p>
+                    <p>关注</p>
+                </div>
+                <div>
+                    <p>1239</p>
+                    <p>粉丝</p>
+                </div>
+                <div>
+                    <p>1239</p>
+                    <p>动态</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-left-mainmenu">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <span class="iconfont"></span>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="iconfont"></span>
+                    <span>好友圈</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="iconfont"></span>
+                    <span>特别关心</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="iconfont"></span>
+                    <span>那年今日</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="iconfont"></span>
+                    <span>收藏</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="iconfont"></span>
+                    <span>游戏应用</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+@*右边*@
+<div class="main-containter clearfix">
+    @*主体*@
+    <div class="main-feed">
+
+    </div>
+
+    <div class="main-right">
+        @*热门博主*@
+        <div class="nav-right-hotPer">
+            <div class="main-right-top">
+                <a class="main-right-top-title" href="javascript:;">热门博主</a>
+                <a class="main-right-top-refresh" href="javascript:;">
+                    <span class="iconfont" style="padding-right:5px"></span>
+                    换一批
+                </a>
+            </div>
+
+            <div class="main-right-hot">
+                <ul>
+                    <li>
+                        <a id="hot1" name="hot" href="javascript:;" onmouseenter="hotshow(this.id);">
+                            <img class="hot-head" src="~/Images/head.jpg" />
+                            <div class="hot-user">
+                                <span class="hot-user-name">崔永元</span>
+                                <p class="hot-user-info">主持人 中国传媒大学教授</p>
+                            </div>
+                            <div class="hot-icon">
+                                <span class="iconfont"></span>
+                                <span>2658</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="hot2" name="hot" href="javascript:;" onmouseenter="hotshow(this.id);">
+                            <img class="hot-head" src="~/Images/head.jpg" />
+                            <div class="hot-user">
+                                <span class="hot-user-name">崔永元</span>
+                                <p class="hot-user-info">主持人 中国传媒大学教授</p>
+                            </div>
+                            <div class="hot-icon">
+                                <span class="iconfont"></span>
+                                <span>2658</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="hot3" name="hot" href="javascript:;" onmouseenter="hotshow(this.id);">
+                            <img class="hot-head" src="~/Images/head.jpg" />
+                            <div class="hot-user">
+                                <span class="hot-user-name">崔永元</span>
+                                <p class="hot-user-info">主持人 中国传媒大学教授</p>
+                            </div>
+                            <div class="hot-icon">
+                                <span class="iconfont"></span>
+                                <span>2658</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="hot4" name="hot" href="javascript:;" onmouseenter="hotshow(this.id);">
+                            <img class="hot-head" src="~/Images/head.jpg" />
+                            <div class="hot-user">
+                                <span class="hot-user-name">崔永元</span>
+                                <p class="hot-user-info">主持人 中国传媒大学教授</p>
+                            </div>
+                            <div class="hot-icon">
+                                <span class="iconfont"></span>
+                                <span>2658</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="hot5" name="hot" href="javascript:;" onmouseenter="hotshow(this.id);">
+                            <img class="hot-head" src="~/Images/head.jpg" />
+                            <div class="hot-user">
+                                <span class="hot-user-name">崔永元</span>
+                                <p class="hot-user-info">主持人 中国传媒大学教授</p>
+                            </div>
+                            <div class="hot-icon">
+                                <span class="iconfont"></span>
+                                <span>2658</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a class="main-right-more" href="javascript:;">查看更多 ></a>
+        </div>
+
+        @*热门话题*@
+        <div class="nav-right-hotPer">
+            <div class="main-right-top">
+                <a class="main-right-top-title" href="javascript:;">热门话题</a>
+                <a class="main-right-top-refresh" href="javascript:;">
+                    <span class="iconfont" style="padding-right:5px"></span>
+                    换一批
+                </a>
+            </div>
+
+            <div class="main-right-hot">
+                <ul>
+                    <li>
+                        <a  href="javascript:;">
+                            <span class="hot-topic">#世界杯吐槽大会#</span>
+                            <span class="hot-index">123.4亿</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            @*<a class="main-right-more" href="javascript:;">查看更多 ></a>*@
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <style>
+        div{
+            width:500px;
+            height:50px;
+            background-color:pink;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#t').mouseenter();
+        });
+
+        function AA() {
+            $('#t').css("height", "100px");
+        }
+
+        function BB(data) {
+            alert(data);
+        }
+    </script>
+</head>
+<body>
+    <div id="t" onmouseenter="AA();"> 
+        <input id="btn" type="button" value="按钮" onclick="BB(this.id);" />
+    </div>
+</body>
+</html>
